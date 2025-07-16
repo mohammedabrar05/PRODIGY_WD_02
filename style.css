@@ -1,0 +1,95 @@
+
+body {
+    font-family: -apple-system, system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96e6a1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.stopwatch-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #333;
+    font-variant-numeric: tabular-nums;
+}
+
+.milliseconds {
+    font-size: 2rem;
+    color: #666;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pause {
+    background-color: #f44336;
+    color: white;
+}
+
+.reset, .lap {
+    background-color: #2196F3;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.laps {
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.lap-time {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
